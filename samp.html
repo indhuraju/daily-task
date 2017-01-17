@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>Booking movie ticket</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="samp.js"></script>
+  <link rel="stylesheet" href="samp.css">
+</head>
+<body ng-app="myapp" ng-controller="myCtrl">
+
+<div>
+    <h1><center>Mera movies</center></h1>
+  <nav>
+    <ul>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </ul>
+</nav>
+</div>
+<div>
+<form>
+<center><input type="radio" ng-model="myVar" value="login"/>login
+<input type="radio" ng-model="myVar" value="movies"/>movies
+<input type="radio" ng-model="myVar" value="Language"/>Language
+</form></center>
+<div ng-switch="myVar">
+  <div ng-switch-when ="login"><center>
+    <div >
+ <!-- First Name: <input type:"text" ng-model:"FirstName"><br><br>
+ Last Name: <input type:"text" ng-model:"LastName"><br><br> -->
+ <p>{{LastName| uppercase}}</p>
+ E-mail: <input type:"email" name:"myInput" ng-model="myInput"><br><br>
+ <!-- <button ng-click="submit">submit</button> -->
+</div>
+</div>
+</div>
+<div ng-switch="myVar">
+  <div ng-switch-when ="movies">
+    <form action=""><center>
+    <input type="checkbox" ng-model="myvar" value="fiction movie"/>fiction movie<br>
+  <input type="checkbox" ng-model="myvar" value="crime movie">crime movie<br>
+  <input type="checkbox" ng-model="myvar" value="fantacy movie">fantacy movie<br>
+</form></center>
+  </div>
+</div>
+
+  <div ng-switch="myVar">
+    <div ng-switch-when ="Language">
+      <form action=""><center>
+      <input type="checkbox" ng-model="myvar" value="Tamil"/>Tamil<br>
+    <input type="checkbox" ng-model="myvar" value="Hindi"/>Hindi<br>
+    <input type="checkbox" ng-model="myvar" value="Telugu"/>Telugu<br>
+  </form></center>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+</body>
+</html>

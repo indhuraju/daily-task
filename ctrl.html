@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>Booking movie ticket</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="samp.js"></script>
+  <link rel="stylesheet" href="samp.css">
+</head>
+<!-- <body ng-app="myapp" ng-controller="myCtrl"> -->
+   <p>{{LastName| uppercase}}</p>
+
+<!-- <body>
+   <div ng-app="myapp" ng-controller="namesCtrl">
+     <p><b>List the authorname and country:</b></p>
+   <ul>
+  <li ng-repeat="x in names | orderBy:'country'">
+    {{ x.name + ', ' + x.country }}
+
+  </li>
+</ul>
+</div> -->
+<body>
+  <div ng-app="myapp" ng-controller="namesCtrl">
+    <!-- <p><b>List the authorname and country:</b></p>
+  <ul>
+ <li ng-repeat="x in names | filter: 'H'">
+   {{ x.name + ', ' + x.country }}
+
+ </li>
+</ul> -->
+<p>Type a letter in the input field:</p>
+
+<p><input type="text" ng-model="test"></p>
+
+<ul>
+  <li ng-repeat="x in names | filter:test">
+    {{ x }}
+  </li>
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>
